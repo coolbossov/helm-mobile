@@ -1,0 +1,33 @@
+name: HELM
+options:
+  bundleIdPrefix: com.sapicday
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16.0"
+
+packages:
+  Supabase:
+    url: https://github.com/supabase/supabase-swift
+    from: "2.5.0"
+
+targets:
+  HELM:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources/HELM
+    resources:
+      - path: Supporting/Assets.xcassets
+      - path: Supporting/Preview Content
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.sapicday.helm
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        SWIFT_VERSION: "6.0"
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_FILE: Supporting/Info.plist
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ""
+    dependencies:
+      - package: Supabase
