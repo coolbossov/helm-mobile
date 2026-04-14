@@ -19,6 +19,7 @@ iOS companion app for the SAPD Ops field sales map (helm-app). Native Swift app 
   - Design decision or trade-off → `docs/decisions.md` (add ADR, newest first)
   - New integration or external dependency → `docs/integrations.md`
   - New env var → `docs/environment.md`
+  - New/changed tests or testable features → `docs/testing.md` (update Quick/Deep/E2E sections)
   - Any shipped change → `CHANGELOG.md` (add entry under today's date)
 - **End of session** — run `@review-2-code-commit` before pushing
 - Note: no CI auto-merge (Swift — GitHub Actions iOS builds require macOS runner, not configured)
